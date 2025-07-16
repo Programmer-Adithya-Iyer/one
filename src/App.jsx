@@ -1,28 +1,72 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import React from "react";
 import "./App.css";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+
+import {
+	facebook,
+	github,
+	instagram,
+	linkedin,
+	mail,
+	twitter,
+	profile,
+} from "./assets/Export";
 
 function App() {
-	const [count, setCount] = useState(0);
-
 	return (
 		<>
-			<Header />
+			<div className="profile">
+				<div className="profile-img"></div>
 
-			<h1>Fun Facts about React</h1>
+				<div className="info">
+					<h1>Ashley</h1>
+					<h2>Frontend Developer</h2>
+					<p>work.ashley@gmail.com</p>
 
-			<ul>
-				<li>Was first released in 2013</li>
-				<li>Was originally created by Jordan Walke</li>
-				<li>Has well over 100K stars on Github</li>
-				<li>Is maintained by Facebook</li>
-				<li>Powers thousands of enterprise apps, including mobile apps.</li>
-			</ul>
+					<div className="action-buttons">
+						<div className="action" id="mail">
+							<img src={mail} alt="Mail icon" />
+							<span>Email</span>
+						</div>
+						<div className="action" id="linkedin">
+							<img src={linkedin} alt="Linkedin icon" />
+							<span>Linkedin</span>
+						</div>
+					</div>
+				</div>
 
-			<Footer />
+				<div className="details">
+					<h1>About</h1>
+					<p>
+						I am a frontend developer with a particular interest in making
+						things simple and automating daily tasks. I try to keep up with
+						security and best practices, and am always looking for new things to
+						learn.
+					</p>
+
+					<h1>Interests</h1>
+					<p>
+						Food expert. Music scholar. Reader. Internet fanatic. Bacon buff.
+						Entrepreneur. Travel geek. Pop culture ninja. Coffee fanatic.
+					</p>
+				</div>
+
+				<div className="contact">
+					<ul>
+						<li>
+							<img src={twitter} alt="Twitter Icon" />
+						</li>
+						<li>
+							<img src={facebook} alt="Facebook Icon" />
+						</li>
+						<li>
+							<img src={instagram} alt="Instagram Icon" />
+						</li>
+						<li>
+							<img src={github} alt="Github Icon" />
+						</li>
+					</ul>
+				</div>
+			</div>
 		</>
 	);
 }
